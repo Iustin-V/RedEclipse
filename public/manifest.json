@@ -1,0 +1,25 @@
+{
+  "short_name": "Red Eclipse",
+  "name": "Red Eclipse Tech SRL",
+  "icons": [
+    {
+      "src": "Red-Eclipse-01.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "Red-Eclipse-01.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Red-Eclipse-01.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

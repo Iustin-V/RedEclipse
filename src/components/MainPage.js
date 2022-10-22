@@ -1,12 +1,13 @@
 import { ContentList } from "./ContentList";
-import { MainContentWrapper, StyledLogo } from "./Styles";
+import { MainContentWrapper, StyledContentWrapper, StyledLogo } from "./Styles";
 import logo from "./images/Red-Eclipse-01.png";
 import Typewriter from "typewriter-effect";
 
 export const MainPage = (props) => {
   return (
     <>
-      {ContentList(props.refArray)}
+      <StyledContentWrapper>{ContentList(props.refArray)}</StyledContentWrapper>
+
       <MainContentWrapper>
         <StyledLogo src={logo} alt="RedEclipseLogo" />
         <Typewriter

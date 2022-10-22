@@ -1,7 +1,12 @@
 import { StyledList, StyledListItem } from "./Styles";
+import aboutIcon from "./images/info.png";
+import experiencesIcon from "./images/experiences.png";
+import technologiesIcon from "./images/technologies.png";
+import contactIcon from "./images/contact.png";
 
 export const ContentList = (refVal) => {
-  const contentArray = [ "Experiences","Technologies", "About","Contact"];
+  const contentArray = ["About", "Experiences", "Technologies", "Contact"];
+  const iconArray = [aboutIcon, experiencesIcon, technologiesIcon, contactIcon];
   const content = contentArray.map((item, index) => {
     return (
       <StyledListItem
@@ -9,7 +14,16 @@ export const ContentList = (refVal) => {
           refVal[index].current.scrollIntoView({ behavior: "smooth" })
         }
       >
+        <img src={iconArray[index]} alt={item} />
         {item}
+        {/*<div*/}
+        {/*  onClick={() =>*/}
+        {/*    refVal[index].current.scrollIntoView({ behavior: "smooth" })*/}
+        {/*  }*/}
+        {/*>*/}
+        {/*  <img src={iconArray[index]} alt={item} />*/}
+        {/*  {item}*/}
+        {/*</div>*/}
       </StyledListItem>
     );
   });

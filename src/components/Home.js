@@ -26,31 +26,27 @@ export const Home = () => {
   const refArray = [experiencesRef, technologiesRef, aboutRef];
   return (
     <>
-      <Navbar setTopButton={setTopButton} />
-      <StyledPageWrapper ref={topRef}>
         <MainPage refArray={refArray} />
-      </StyledPageWrapper>
 
-      <StyledPageWrapper ref={experiencesRef}>
-        <About />
-      </StyledPageWrapper>
+      {/*<StyledPageWrapper ref={experiencesRef}>*/}
+      {/*  <About />*/}
+      {/*</StyledPageWrapper>*/}
 
-      <StyledPageWrapper ref={experiencesRef}>
-        <Experiences />
-      </StyledPageWrapper>
-      <StyledPageWrapper ref={experiencesRef}>
-        <Experiences />
-      </StyledPageWrapper>
-
-      <StyledPageWrapper ref={technologiesRef}>
-        <TechnologiesPage />
-      </StyledPageWrapper>
-      <StyledToTopButton
-        bottom={isTopButton ? "40px" : "-50px"}
-        onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" })}
-      >
-        <StyledImageNew src={arrow} alt="Arrow" />
-      </StyledToTopButton>
+      {/*<StyledPageWrapper ref={experiencesRef}>*/}
+      {/*  <Experiences />*/}
+      {/*</StyledPageWrapper>*/}
+      {/*<StyledPageWrapper ref={experiencesRef}>*/}
+      {/*  <Experiences />*/}
+      {/*</StyledPageWrapper>*/}
+      {/*<StyledPageWrapper ref={technologiesRef}>*/}
+      {/*  <TechnologiesPage />*/}
+      {/*</StyledPageWrapper>*/}
+      {/*<StyledToTopButton*/}
+      {/*  bottom={isTopButton ? "40px" : "-50px"}*/}
+      {/*  onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" })}*/}
+      {/*>*/}
+      {/*  <StyledImageNew src={arrow} alt="Arrow" />*/}
+      {/*</StyledToTopButton>*/}
       <Footer />
     </>
   );

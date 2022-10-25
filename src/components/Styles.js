@@ -26,6 +26,9 @@ export const StyledPageWrapper = styled.div`
 
 export const StyledLogo = styled.img`
   height: 500px;
+  @media (max-width: 768px) {
+    height: 420px;
+  }
 `;
 
 export const StyledNav = styled.div`
@@ -49,10 +52,7 @@ export const StyledNavItem = styled(Link)`
   text-decoration: none;
   font-size: 19px;
 `;
-export const StyledText = styled.p`
-  font-weight: 700;
-  margin: 0;
-`;
+
 export const StyledProgressContainer = styled.div`
   position: fixed;
   width: 100%;
@@ -79,12 +79,24 @@ export const StyledImage = styled.img`
   :nth-child(odd) {
     height: 130px;
   }
-  :hover {
+  :hover {    border: 5px solid ${COLORS.BRAND_DARK_RED};
+
     background-color: #fafafa;
     transform: scale(
       1.2
     ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     transition: 0.5ms;
+  }
+  @media (max-width: 768px) {
+    border: 5px solid black;
+    height: 50px;
+    box-shadow: none;
+
+    :nth-child(odd) {
+      border: 5px solid;
+
+      height: 50px;
+    }
   }
 `;
 export const StyledGallery = styled.div`
@@ -96,6 +108,10 @@ export const StyledGallery = styled.div`
   justify-content: space-between;
   gap: 45px 65px;
   align-items: center;
+  @media (max-width: 768px) {
+    gap: 15px 10px;
+    width: calc(100% - 30px);
+  }
 `;
 export const StyledDynamicDiv = styled.div`
   height: ${(props) => props.height};
@@ -111,11 +127,13 @@ export const StyledDynamicDiv = styled.div`
     flex-direction: column;
   }
 `;
-export const CenteredItem = styled.div`
+export const StyledTitle = styled.div`
   display: flex;
   justify-content: center;
-  padding: 100px 0;
   font-size: 40px;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 export const MainContentWrapper = styled.div`
   display: flex;
@@ -126,7 +144,15 @@ export const MainContentWrapper = styled.div`
   left: 240px;
   width: calc(100vw - 240px);
   height: 100vh;
+  gap: 25px;
   justify-content: center;
+  @media (max-width: 768px) {
+    left: 50px;
+    width: calc(100vw - 50px);
+    span {
+      font-size: 25px;
+    }
+  }
 `;
 export const StyledList = styled.ul`
   left: 5%;
@@ -138,19 +164,61 @@ export const StyledList = styled.ul`
   gap: 50px;
   padding: 0;
   height: 100%;
+  transition: width 1s ease-out 10ms;
+  overflow: hidden;
+  p {
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    width: 50px;
+    p {
+      display: none;
+      font-size: 25px;
+    }
+    :hover {
+      width: 260px;
+      align-items: flex-start;
+      p {
+        display: flex;
+      }
+    }
+  }
 `;
 
 export const StyledListItem = styled.li`
   position: relative;
-  width: fit-content;
   transition: opacity 2s ease-out 10ms;
   margin: 0;
-  padding:0 30px;
+  padding:10px 30px;
   list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
+  width: calc(100% - 60px);
+  @media(max-width: 768px){
+    width: calc(100% - 20px);
+
+    padding: 10px;
+  
+  }
+  :hover{
+    transform: rotateY(180deg);
+
+    transition: transform 0.6s ease-out 10ms,background-color 0.7s ease-in-out;
+
+    background-color: #e7e7e7;
+    color:black;
+      p{
+        transform: rotateY(-180deg);
+        
+      }
+    img{
+      filter: none;
+    }
+  }
+}
+
 
   img {
     height: 30px;
@@ -198,9 +266,9 @@ export const StyledListItem = styled.li`
   transform: scaleX(1);
 //}
 `;
-export const StyledExperienceContainer = styled.div`
-  font-size: 35px;
-  width: 100%;
+export const StyledText = styled.div`
+  font-size: 25px;
+  width: calc(100% - 50px);
   margin-bottom: 50px;
   max-width: 600px;
 `;
@@ -214,6 +282,10 @@ export const StyledFooter = styled.div`
   height: 30px;
   p {
     margin: 0;
+  }
+  @media (max-width: 768px) {
+    left: 50px;
+    width: calc(100vw - 50px);
   }
 `;
 export const StyledFooterText = styled.p`
@@ -300,16 +372,16 @@ export const SmallContainer = styled.div`
 `;
 
 export const StyledDivider = styled.hr`
-  border-left: 5px solid #a30001;
-  border-radius: 5px;
-  width: 0;
-  height: 500px;
-  @media (max-width: 768px) {
-    border-top: 5px solid #a30001;
-    max-width: 500px;
-    width: 100%;
-    height: 0;
-  }
+  //border-left: 5px solid #a30001;
+  //border-radius: 5px;
+  //width: 0;
+  //height: 500px;
+  //@media (max-width: 768px) {
+  border-top: 5px solid #a30001;
+  max-width: 500px;
+  width: 100%;
+  height: 0;
+  //}
 `;
 export const StyledContentWrapper = styled.div`
   position: fixed;

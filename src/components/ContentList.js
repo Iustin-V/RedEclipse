@@ -15,17 +15,9 @@ export const ContentList = (refVal) => {
         }
       >
         <img src={iconArray[index]} alt={item} />
-        {item}
-        {/*<div*/}
-        {/*  onClick={() =>*/}
-        {/*    refVal[index].current.scrollIntoView({ behavior: "smooth" })*/}
-        {/*  }*/}
-        {/*>*/}
-        {/*  <img src={iconArray[index]} alt={item} />*/}
-        {/*  {item}*/}
-        {/*</div>*/}
+        <p>{item}</p>
       </StyledListItem>
     );
   });
-  return <StyledList>{content}</StyledList>;
+  return <StyledList >{content}</StyledList>;
 };

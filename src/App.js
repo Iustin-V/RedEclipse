@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {  StyledWrapper } from "./components/Styles";
 
 function App() {
+
+    document.body.style.overflow="hidden";
   return (
     <StyledWrapper>
       <BrowserRouter>

@@ -203,16 +203,11 @@ export const StyledListItem = styled.li`
   
   }
   :hover{
-    transform: rotateY(180deg);
-
-    transition: transform 0.6s ease-out 10ms,background-color 0.7s ease-in-out;
+ 
 
     background-color: #e7e7e7;
     color:black;
-      p{
-        transform: rotateY(-180deg);
-        
-      }
+  
     img{
       filter: none;
     }

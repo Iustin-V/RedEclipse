@@ -1,5 +1,6 @@
 {
   "name": "red-eclipse",
+  "homepage": "http://redeclipse.ro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

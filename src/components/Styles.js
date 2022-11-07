@@ -345,3 +345,13 @@ export const StyledContentWrapper = styled.div`
   background-color: #a40000;
   color: white;
 `;
+export const WIPContainer=styled.div`
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    span{
+    font-size:30px;}
+    `

@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {  StyledWrapper } from "./components/Styles";
+import {WorkInProgress} from "./components/WorkInProgress";
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
     <StyledWrapper>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/contact" element={<Home />} />
+          <Route path="/*" element={<WorkInProgress />} />
+          {/*<Route path="/" element={<Home />} />*/}
+          {/*<Route path="/home" element={<Home />} />*/}
+          {/*<Route path="/contact" element={<Home />} />*/}
         </Routes>
       </BrowserRouter>
     </StyledWrapper>
